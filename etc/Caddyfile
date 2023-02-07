@@ -1,0 +1,20 @@
+:$PORT
+root * /usr/share/caddy
+file_server browse
+
+header {
+    X-Robots-Tag none
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    Referrer-Policy no-referrer-when-downgrade
+}
+
+@websocket_vless {
+path /$AUUID-vless
+}
+reverse_proxy @websocket_vless 127.0.0.1:8081
+
+@websocket_vmess {
+path /$AUUID-vmess
+}
+reverse_proxy @websocket_vmess 127.0.0.1:8082
