@@ -1,5 +1,5 @@
     提醒： 滥用可能导致账户被BAN！！！
-#  Docker映像 : lovekl/section
+#  Docker映像 : miweh/section
     使用xray+caddy同时部署通过ws传输的vmess vless协议,客户端务必使用TLS连接
 
 * 代理协议：vless 或 vmess
